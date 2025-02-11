@@ -1,0 +1,109 @@
+
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 32px 13%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: all .50s ease;
+
+}
+
+.logo{
+    color: var(--text-color);
+    font-size: 40px;
+    font-weight: bold;
+    margin-right: 100px;
+    
+
+}
+
+.navlist{
+    display: flex;
+
+}
+.navlist a{
+    display: inline-flex;
+    font-size: var(--p-font);
+    font-weight: 500;
+    color: var(--text-color);
+    margin: 0 30px ;
+    transition: all .6s ease;
+}
+.navlist a:hover{
+    color: var(--other-color);
+    transform: translateY(-6px);
+}
+.nav-right{
+    display: flex;
+    align-items: center;
+}
+
+/* .nav-btn{
+    display: inline-block;
+    padding: 14px 35px;
+    background: var(--main-color);
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    border-radius: 30px;
+    border: 2px solid transparent;
+    transition: all .6s ease;
+
+} */
+/* .nav-btn:hover{
+    background: transparent;
+    border: 2px solid var(--main-color);
+} */
+
+#menu-icon{
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 10001;
+    margin-left: 20px;
+    display: none;
+
+}
+.bx-x {
+    /* Add styles for the cross icon */
+    color: red; /* Example color for the cross icon */
+}
+
+.bx-menu {
+    color: white; 
+}
+
+ul li ul.submenu li {
+    display: block;
+    display: flex;
+    justify-content: flex-start;
+}
+
+ul li ul.submenu {
+    width: 200px;
+    border: 2px solid blue;
+    border-radius: 10px;
+    background-color:transparent;
+    font-weight: 400;
+    font-size: 10px;
+    position: absolute;
+    z-index: 1000;
+    display: none;
+}
+
+ul li ul.submenu li a{
+    padding: 0px 10px 0px 10px;
+    margin: 0px 10px 0px 10px;
+    color:var(white);
+}
+
+ul li:hover ul.submenu{
+    display: block;
+}

@@ -1,0 +1,30 @@
+.about{
+    display: flex;
+    flex-direction: column;
+    margin-top:30px;
+    padding-top:5px
+    color:rgb(221, 212, 212);
+    border-radius: 10px;
+    justify-content: space-between;
+    background-color:#1d1c1b;
+    text-align: center;
+    padding: 50px;
+}
+
+.aboutcontainer {
+    max-width: 800px;
+    background-color:rgb(48, 47, 47);
+    padding: 20px;
+    display:flex;
+    flex-direction:column;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.aboutcontainer h2 {
+    color: rgb(81, 171, 223);
+}
+.aboutcontainer p {
+    color:rgb(221, 212, 212);
+    line-height: 1.6;
+}
