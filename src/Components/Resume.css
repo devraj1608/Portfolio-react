@@ -1,54 +1,55 @@
-.infocontainer
-{
+.infocontainer {
     display: flex;
     flex-direction: column;
-    margin-top:30px;
+    margin-top: 30px;
     padding: 30px;
-    padding-top:5px
-    color:rgb(221, 212, 212);
+    padding-top: 5px;
+    color: rgb(221, 212, 212);
     border-radius: 10px;
-    justify-content: space-between;
-    background-color:#1d1c1b;
+    background-color: #1d1c1b;
 }
-.personalinfo h1{
-    margin-left:10px;
+
+.personalinfo h1 {
+    margin-left: 10px;
     color: rgb(221, 212, 212);
     display: inline;
-    
 }
-.personalinfo p{
-    margin-left:110px;
- }
- .personalinfo p a{
+
+.personalinfo p {
+    margin-left: 110px;
+}
+
+.personalinfo p a {
     color: rgb(221, 212, 212);
- }
-.personalinfo img{
+}
+
+.personalinfo img {
     display: inline-block;
     width: 80px;
     height: 80px;
     background-color: rgb(221, 212, 212);
     border-radius: 50%;
-    position:relative;
-    top:50px;
-    margin-left:20px;
+    position: relative;
+    top: 50px;
+    margin-left: 20px;
 }
 
 .container {
     display: flex;
-    padding: 20px; 
-    flex-direction:row;
+    padding: 20px;
+    flex-direction: row;
 }
 
-.container h2{
-    margin-bottom:2px;
-    margin-top:25px
+.container h2 {
+    margin-bottom: 2px;
+    margin-top: 25px;
 }
 
 .first, .second {
-    margin: 10px 0; 
-    padding: 20px; 
-    border-radius: 8px; 
-    width:50%;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%;
 }
 
 .first {
@@ -56,6 +57,131 @@
 }
 
 .second {
-    background-color:rgb(81, 171, 223); 
-    color:#1d1c1b;
+    background-color: rgb(120, 192, 233);
+    color: #1d1c1b;
+}
+
+.download-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 15px 30px;
+    background: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(33, 150, 243, 0.4);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.download-button:hover {
+    background: #1976D2;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(33, 150, 243, 0.5);
+}
+
+.download-button:active {
+    transform: translateY(0);
+}
+
+/* PDF Generation Overrides */
+.pdf-generation {
+    background-color: white !important;
+    color: black !important;
+    transform: scale(1) !important;
+}
+
+.pdf-generation * {
+    background-color: white !important;
+    color: black !important;
+    transition: none !important;
+    animation: none !important;
+}
+
+.pdf-generation img {
+    filter: brightness(100%) contrast(100%) !important;
+}
+
+.pdf-generation a {
+    color: black !important;
+    text-decoration: underline !important;
+}
+
+.pdf-generation .download-button {
+    display: none !important;
+}
+
+/* Mobile View Overrides */
+.force-mobile .container {
+    flex-direction: column !important;
+    padding: 10px !important;
+}
+
+.force-mobile .first, 
+.force-mobile .second {
+    width: 100% !important;
+    padding: 15px !important;
+    font-size: 10px !important;
+}
+
+.force-mobile .personalinfo h1 {
+    font-size: 20px !important;
+}
+
+.force-mobile .personalinfo p {
+    font-size: 12px !important;
+    margin-left: 20px !important;
+}
+
+.force-mobile .personalinfo .detail {
+    margin-top: 25px !important;
+}
+
+.force-mobile .personalinfo img {
+    width: 60px !important;
+    height: 60px !important;
+    top: 30px !important;
+}
+
+/* Responsive Design for Phones */
+@media screen and (max-width: 740px) {
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+     .download-button {
+        display:none;
+    }
+    .first, .second {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .first, .second {
+        font-size: 10px;
+    }
+
+    .personalinfo h1 {
+        font-size: 20px;
+    }
+
+    .personalinfo p {
+        font-size: 12px;
+        margin-left: 20px;
+    }
+
+    .personalinfo .detail {
+        margin-top: 25px;
+    }
+
+    .personalinfo img {
+        width: 60px;
+        height: 60px;
+        top: 30px;
+    }
 }
